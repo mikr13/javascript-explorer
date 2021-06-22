@@ -2,15 +2,15 @@ import React, { useState } from "react"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import AutoCompleteInput from "../ui/AutoCompleteInput"
-import CodeDetailsCard from "../ui/CodeDetailsCard"
+import DetailsCard from "../ui/DetailsCard"
 
 const id = `input-Array`
 const idSub = `${id}-sub-option`
+const baseUrl =
+  "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/" // NOTE: attach name property of object to the end
 const data = {
-  selectedOption: "",
   dropdownLabel: "I have an Array, I would like to: ",
-  baseUrl:
-    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/", // NOTE: attach name property of object to the end
+  defaultCode: `let arr = [5, 1, 8];`,
   options: Object.freeze({
     "add items or merge arrays": {
       dropdownLabel: "I need to add:",
@@ -324,6 +324,11 @@ const Arrays = () => {
   const [valueTopLevel, changeValueTopLevel] = useState()
   const [valueSubLevel, changeValueSubLevel] = useState()
 
+  const change = (val) => {
+    changeValueSubLevel()
+    changeValueTopLevel(val)
+  }
+
   return (
     <Grid container spacing={3}>
       <Grid item xs={12}>
@@ -332,22 +337,20 @@ const Arrays = () => {
           Find the array method you need without digging through the docs
         </Typography>
       </Grid>
-      <React.Fragment>
-        <Grid item xs={12}>
-          <label htmlFor={id}>
-            <Typography variant="body1">{data.dropdownLabel}</Typography>
-          </label>
-        </Grid>
-        <Grid item xs={12}>
-          <AutoCompleteInput
-            id={id}
-            options={Object.entries(data.options)}
-            changeValue={changeValueTopLevel}
-          />
-        </Grid>
-      </React.Fragment>
+      <Grid item xs={12}>
+        <label htmlFor={id}>
+          <Typography variant="body1">{data.dropdownLabel}</Typography>
+        </label>
+      </Grid>
+      <Grid item xs={12}>
+        <AutoCompleteInput
+          id={id}
+          options={Object.entries(data.options)}
+          changeValue={change}
+        />
+      </Grid>
       {valueTopLevel && valueTopLevel.length && (
-        <React.Fragment>
+        <>
           <Grid item xs={12}>
             <label htmlFor={idSub}>
               <Typography variant="body1">
@@ -363,10 +366,15 @@ const Arrays = () => {
               label="shortDesc"
             />
           </Grid>
-        </React.Fragment>
+        </>
       )}
       {valueSubLevel && Object.keys(valueSubLevel).length && (
-        <CodeDetailsCard main="Array" data={valueSubLevel} />
+        <DetailsCard
+          main="Array"
+          url={`${baseUrl}${valueSubLevel.name}`}
+          data={valueSubLevel}
+          defaultCode={data.defaultCode}
+        />
       )}
     </Grid>
   )

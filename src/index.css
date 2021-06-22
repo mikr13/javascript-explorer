@@ -1,12 +1,3 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  color: #2c3e50;
-  background: #f6f7f7;
-  height: 100% !important;
-}
-
 @font-face {
   font-family: 'Gill Sans W04 Book';
   src: url('./assets/fonts/c4be5717-c19c-43a5-9ad3-b548ddf070d4.eot');
@@ -37,10 +28,6 @@ html {
     url('./assets/fonts/b56150eb-5caa-4385-b907-373e97ddb2ff.svg#b56150eb-5caa-4385-b907-373e97ddb2ff') format('svg');
 }
 
-html {
-  font-size: 100%;
-}
-
 body {
   font-family: 'Gill Sans W04 Book', Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
@@ -50,50 +37,9 @@ body {
   letter-spacing: 0.005em !important;
 }
 
-#root {
-  height: 100%
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 3rem 0 1.38rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 3.052rem;
-}
-
-h2 {
-  font-size: 2.441rem;
-}
-
-h3 {
-  font-size: 1.953rem;
-}
-
-h4 {
-  font-size: 1.563rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-small,
-.text_small {
-  font-size: 0.8rem;
 }
 
 .github-corner:hover .octo-arm {
@@ -115,9 +61,41 @@ small,
   border-top: 1.5px solid #f50057;
 }
 
+.responsive-h1 {
+  font-size: 4.75rem !important;
+}
+
+.responsive-h1 span::after {
+  width: 85px;
+}
+
 .MuiTypography-subtitle1 {
   font-style: italic;
   color: #f50057
+}
+
+.usage-code {
+  padding: 20px 40px;
+  margin: 20px 0;
+  background: #333;
+  border: 2px solid #f55e41;
+  transition: 0.2s all ease;
+  display: block;
+  border-radius: 5px;
+  line-height: 1.8em;
+}
+
+.usage1 {
+  color: #aeded4;
+}
+
+.usage2 span {
+  color: #ecc2a4;
+}
+
+.exampleoutput,
+.exampleoutput2 {
+  display: inline-block;
 }
 
 @keyframes octocat-wave {

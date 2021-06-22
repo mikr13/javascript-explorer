@@ -5,6 +5,8 @@ import { makeStyles } from "@material-ui/core/styles"
 import { useSelector, useDispatch } from "react-redux"
 import Tab from "@material-ui/core/Tab"
 import { TOGGLE_TAB_INDEX } from "../../redux/UiReducer"
+import { useTheme } from "@material-ui/core/styles"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 const a11yProps = (index) => ({
   id: `vertical-tab-${index}`,
@@ -21,13 +23,15 @@ const TabsList = () => {
   const classes = useStyles()
   const { tabIndex, tabs } = useSelector((state) => state.ui)
   const dispatch = useDispatch()
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down("md"))
 
   const handleChange = (_, value) => dispatch({ type: TOGGLE_TAB_INDEX, value })
 
   return (
-    <Grid xs={2}>
+    <Grid item md={12} lg={2}>
       <Tabs
-        orientation="vertical"
+        orientation={matches ? "horizontal" : "vertical"}
         variant="scrollable"
         value={tabIndex}
         onChange={handleChange}

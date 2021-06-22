@@ -10,10 +10,14 @@ import NightsStayIcon from "@material-ui/icons/NightsStay"
 import Slider from "./Slider"
 import DataStructuresTab from "./DataStructuresTab"
 import { changeDarkMode } from "../../redux/UiReducer"
+import { useTheme } from "@material-ui/core/styles"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
+    paddingTop: 10,
+    paddingBottom: 30,
   },
   fab: {
     position: "absolute",
@@ -25,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Layout = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down("md"))
   const { prefersDarkMode } = useSelector((state) => state.ui)
   const classes = useStyles()
   const dispatch = useDispatch()
@@ -33,8 +39,8 @@ const Layout = () => {
 
   return (
     <Container maxWidth="lg">
-      <Typography variant="h1" noWrap={true}>
-        <span>JavaScript</span> Explorer
+      <Typography variant="h1" className={matches && "responsive-h1"}>
+        <span>{matches ? "JS" : "JavaScript"}</span> Explorer
       </Typography>
       <Grid container my={4} className={classes.root}>
         <Slider />

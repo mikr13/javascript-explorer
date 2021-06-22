@@ -6,10 +6,10 @@ const initialState = {
   tabIndex: 0,
   tabs: [
     { name: "Arrays", value: 0 },
-    { name: "Objects", value: 1 },
-    { name: "Strings", value: 2 },
+    // { name: "Objects", value: 1 },
+    // { name: "Strings", value: 2 },
   ],
-  colors: { pink: '#FEB3B3', green: '#B0EA68' }
+  colors: { pink: "#FEB3B3", green: "#B0EA68" },
 }
 
 export default (state = initialState, action) => {
@@ -17,14 +17,14 @@ export default (state = initialState, action) => {
     case TOGGLE_DARK_MODE: {
       return {
         ...state,
-        prefersDarkMode: !state.prefersDarkMode
+        prefersDarkMode: !state.prefersDarkMode,
       }
     }
 
     case TOGGLE_TAB_INDEX: {
       return {
         ...state,
-        tabIndex: action.value
+        tabIndex: action.value,
       }
     }
 
@@ -34,6 +34,6 @@ export default (state = initialState, action) => {
   }
 }
 
-export const changeDarkMode = () => async dispatch => {
+export const changeDarkMode = () => async (dispatch) => {
   dispatch({ type: TOGGLE_DARK_MODE })
 }

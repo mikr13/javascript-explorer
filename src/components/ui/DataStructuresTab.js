@@ -10,7 +10,7 @@ const DataStructuresTab = () => {
   const { tabIndex } = useSelector((state) => state.ui)
 
   return (
-    <Grid xs={10}>
+    <Grid item md={12} lg={10}>
       <TabPanel index={0} value={tabIndex}>
         <Arrays />
       </TabPanel>
