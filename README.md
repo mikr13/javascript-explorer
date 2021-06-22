@@ -5,7 +5,7 @@
 
 > ⭐ A resource to help developers figure out what JavaScript methods would be best to use at any given time
 
-## 🏠 [Homepage](https://github.com/MiKr13/javascript-explorer)
+## 🏠 [Homepage](https://mikr13.github.io/javascript-explorer/)
 
 ## Install
 
