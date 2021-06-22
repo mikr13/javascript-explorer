@@ -1,6 +1,5 @@
 # Welcome to javascript-explorer 👋
 
-![Version](https://img.shields.io/badge/version-0.0.1--ALPHA-blue.svg?cacheSeconds=2592000)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/MiKr13/javascript-explorer)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://github.com/MiKr13/javascript-explorer/LICENSE.md)
 
