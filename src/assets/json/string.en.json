@@ -1,0 +1,86 @@
+{
+  "baseUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/",
+  "dropdownLabel": "I have an String, I would like to: ",
+  "defaultCode": "let str = \"The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?\";",
+  "specialNote": "All string methods return a new string. They don't modify the original string.<br>Formally said: Strings are immutable: Strings cannot be changed, only replaced.",
+  "options": {
+    "extract a part of string": {
+      "dropdownLabel": "Parameters can have:",
+      "options": [{
+          "name": "slice",
+          "shortDesc": "positive or negative indexes",
+          "desc": "Extracts a part of a string and returns the extracted part in a new string. This can accept negative index.",
+          "example": "let result = str.slice(-84, -65);<br>console.log(result);",
+          "output": "The quick brown fox"
+        },
+        {
+          "name": "substring",
+          "shortDesc": "positive indexes only",
+          "desc": "Extracts a part of a string and returns the extracted part in a new string. This cannot accept negative index.",
+          "example": "let result = str.substring(0, 19);<br>console.log(result);",
+          "output": "The quick brown fox"
+        },
+        {
+          "name": "substr",
+          "shortDesc": "starting index & length of part to extract",
+          "desc": "Extracts a part of a string and returns the extracted part in a new string. The second parameter specifies the length of the extracted part.",
+          "example": "let result = str.substr(0, 19);<br>console.log(result);",
+          "output": "The quick brown fox"
+        }
+      ]
+    },
+    "replace a part of string": {
+      "dropdownLabel": "I need to:",
+      "options": [{
+          "name": "replace",
+          "shortDesc": "replace once with string",
+          "desc": "Returns a new string with first occurrence of a string replaced by a replacement.",
+          "example": "let result = str.replace('dog', 'monkey');<br>console.log(result);",
+          "output": "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+        },
+        {
+          "name": "replace",
+          "shortDesc": "replace once or all with regular expression",
+          "desc": "Returns a new string with some or all matches of a pattern replaced by a replacement. Here pattern is a RegExp",
+          "example": "let result = str.replace(/dog/gi, 'monkey'); <span class='comment'>// g means global (replace all) & i means case insensitive</span> <br>console.log(result);",
+          "output": "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
+        },
+        {
+          "name": "replaceAll",
+          "shortDesc": "replace all always with or without regular expression",
+          "desc": "Returns a new string with all matches of a pattern replaced by a replacement.",
+          "example": "let result = str.replaceAll('dog', 'monkey');<br>console.log(result);",
+          "output": "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
+        }
+      ]
+    },
+    "change string case": {
+      "dropdownLabel": "I need to:",
+      "options": [{
+          "name": "toLowerCase",
+          "shortDesc": "make it lowercase",
+          "desc": "Converts the string to lowercase",
+          "example": "let result = str.toLowerCase();<br>console.log(result)",
+          "output": "the quick brown fox jumps over the lazy monkey. if the monkey reacted, was it really lazy?"
+        },
+        {
+          "name": "toUpperCase",
+          "shortDesc": "make it uppercase",
+          "desc": "Converts the string to uppercase",
+          "example": "let result = str.toUpperCase();<br>console.log(result);",
+          "output": "THE QUICK BROWN FOX JUMPS OVER THE LAZY MONKEY. IF THE MONKEY REACTED, WAS IT REALLY LAZY?"
+        }
+      ]
+    },
+    "something else": {
+      "dropdownLabel": "I need to:",
+      "options": [{
+        "name": "length",
+        "shortDesc": "find the length of the string",
+        "desc": "Returns the number of elements in that string.",
+        "example": "console.log(str.length);",
+        "output": "90"
+      }]
+    }
+  }
+}

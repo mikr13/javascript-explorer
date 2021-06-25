@@ -35,6 +35,7 @@ const CodeDetailsCard = React.memo(({ data, defaultCode }) => {
                 component="p"
                 dangerouslySetInnerHTML={{ __html: defaultCode }}
               ></Typography>
+              <br />
               <Typography
                 variant="body1"
                 component="p"

@@ -39,7 +39,7 @@ const Layout = () => {
 
   return (
     <Container maxWidth="lg">
-      <Typography variant="h1" className={matches && "responsive-h1"}>
+      <Typography variant="h1" className={matches ? "responsive-h1" : ""}>
         <span>{matches ? "JS" : "JavaScript"}</span> Explorer
       </Typography>
       <Grid container my={4} className={classes.root}>

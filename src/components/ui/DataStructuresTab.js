@@ -2,9 +2,7 @@ import React from "react"
 import Grid from "@material-ui/core/Grid"
 import { useSelector } from "react-redux"
 import TabPanel from "./TabPanel"
-import Arrays from "../ds/Arrays"
-import Objects from "../ds/Objects"
-import Strings from "../ds/Strings"
+import Details from "../ds/Details"
 
 const DataStructuresTab = () => {
   const { tabIndex } = useSelector((state) => state.ui)
@@ -12,13 +10,13 @@ const DataStructuresTab = () => {
   return (
     <Grid item md={12} lg={10}>
       <TabPanel index={0} value={tabIndex}>
-        <Arrays />
+        <Details label="Array" />
       </TabPanel>
       <TabPanel index={1} value={tabIndex}>
-        <Objects />
+        <Details label="Object" />
       </TabPanel>
       <TabPanel index={2} value={tabIndex}>
-        <Strings />
+        <Details label="String" />
       </TabPanel>
     </Grid>
   )
