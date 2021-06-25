@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Grid from "@material-ui/core/Grid"
 import Alert from "@material-ui/lab/Alert"
+import AlertTitle from "@material-ui/lab/AlertTitle"
 import Typography from "@material-ui/core/Typography"
 import PropTypes from "prop-types"
 import AutoCompleteInput from "../ui/AutoCompleteInput"
@@ -29,11 +30,12 @@ const Details = ({ label }) => {
       </Grid>
       {data.specialNote && (
         <Grid item xs={12}>
-          <Alert
-            icon={false}
-            severity="warning"
-            dangerouslySetInnerHTML={{ __html: data.specialNote }}
-          ></Alert>
+          <Alert severity="info">
+            <AlertTitle>Info</AlertTitle>
+            <Typography
+              dangerouslySetInnerHTML={{ __html: data.specialNote }}
+            ></Typography>
+          </Alert>
         </Grid>
       )}
       {data.dropdownLabel && (
