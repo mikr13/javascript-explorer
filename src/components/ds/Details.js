@@ -29,9 +29,11 @@ const Details = ({ label }) => {
       </Grid>
       {data.specialNote && (
         <Grid item xs={12}>
-          <Alert icon={false} severity="warning">
-            {data.specialNote}
-          </Alert>
+          <Alert
+            icon={false}
+            severity="warning"
+            dangerouslySetInnerHTML={{ __html: data.specialNote }}
+          ></Alert>
         </Grid>
       )}
       {data.dropdownLabel && (
