@@ -1,6 +1,6 @@
 {
   "name": "javascript-explorer",
-  "version": "0.1.0",
+  "version": "0.2.0-BETA",
   "private": false,
   "homepage": "http://mikr13.github.io/javascript-explorer",
   "dependencies": {

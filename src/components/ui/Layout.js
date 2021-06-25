@@ -8,7 +8,7 @@ import Fab from "@material-ui/core/Fab"
 import WbSunnyIcon from "@material-ui/icons/WbSunny"
 import NightsStayIcon from "@material-ui/icons/NightsStay"
 import Slider from "./Slider"
-import DataStructuresTab from "./DataStructuresTab"
+import TabList from "./TabList"
 import { changeDarkMode } from "../../redux/UiReducer"
 import { useTheme } from "@material-ui/core/styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
@@ -44,7 +44,7 @@ const Layout = () => {
       </Typography>
       <Grid container my={4} className={classes.root}>
         <Slider />
-        <DataStructuresTab />
+        <TabList />
       </Grid>
       <Fab
         aria-label="theme-change"

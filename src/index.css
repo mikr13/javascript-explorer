@@ -93,6 +93,10 @@ code {
   color: #ecc2a4;
 }
 
+.comment {
+  color: #9d9488;
+}
+
 .exampleoutput,
 .exampleoutput2 {
   display: inline-block;
