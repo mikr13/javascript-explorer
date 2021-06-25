@@ -42,6 +42,14 @@ code {
     monospace;
 }
 
+.theme-switcher-fab {
+  color: #fff !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  position: fixed !important;
+  background-color: #f50057 !important;
+}
+
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out
 }
@@ -82,7 +90,11 @@ code {
   transition: 0.2s all ease;
   display: block;
   border-radius: 5px;
-  line-height: 1.8em;
+  line-height: 2.5em;
+}
+
+.usage-code>span {
+  font-size: 1.5em;
 }
 
 .usage1 {

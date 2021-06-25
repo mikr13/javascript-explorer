@@ -22,7 +22,9 @@ const AutoCompleteInput = React.memo(
         getOptionLabel={(option) => option[label]}
         selectOnFocus
         onChange={(_, val) => changeValue(val)}
-        getOptionSelected={(option, val) => option[label] === val[label]}
+        getOptionSelected={(option, val) =>
+          option[label] === val[label] || null
+        }
         renderInput={(params) => (
           <TextField {...params} label="Choose operation" variant="outlined" />
         )}

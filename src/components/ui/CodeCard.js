@@ -29,20 +29,18 @@ const CodeDetailsCard = React.memo(({ data, defaultCode }) => {
             Usage
           </Typography>
           <Box className="usage-code usage1">
-            <Typography variant="body1" component="p">
-              <Typography
-                variant="body1"
-                component="p"
-                dangerouslySetInnerHTML={{ __html: defaultCode }}
-              ></Typography>
-              <br />
-              <Typography
-                variant="body1"
-                component="p"
-                className="exampleoutput"
-                dangerouslySetInnerHTML={{ __html: data.example }}
-              ></Typography>
-            </Typography>
+            <Typography
+              variant="body1"
+              component="span"
+              dangerouslySetInnerHTML={{ __html: defaultCode }}
+            ></Typography>
+            <br />
+            <Typography
+              variant="body1"
+              component="span"
+              className="exampleoutput"
+              dangerouslySetInnerHTML={{ __html: data.example }}
+            ></Typography>
           </Box>
           <Box className="usage2">
             <Typography
@@ -54,14 +52,12 @@ const CodeDetailsCard = React.memo(({ data, defaultCode }) => {
               Output
             </Typography>
             <Box className="usage-code">
-              <Typography variant="body1" component="p">
-                <Typography
-                  variant="body1"
-                  component="span"
-                  className="exampleoutput2"
-                  dangerouslySetInnerHTML={{ __html: data.output }}
-                ></Typography>
-              </Typography>
+              <Typography
+                variant="body1"
+                component="span"
+                className="exampleoutput2"
+                dangerouslySetInnerHTML={{ __html: data.output }}
+              ></Typography>
             </Box>
           </Box>
         </CardContent>
