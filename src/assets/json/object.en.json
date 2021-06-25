@@ -2,7 +2,6 @@
   "baseUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/",
   "dropdownLabel": "I have an String, I would like to: ",
   "defaultCode": "let str = \"The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?\";",
-  "specialNote": "All string methods return a new string. They don't modify the original string.<br>Formally said: Strings are immutable: Strings cannot be changed, only replaced.",
   "options": {
     "extract a part of string": {
       "dropdownLabel": "Parameters can have:",
