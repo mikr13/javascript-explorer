@@ -126,6 +126,20 @@
           "desc": "This method determines whether a string contains the characters of a specified string.<br>This method returns true if the string contains the characters, and false if not.<br><strong > Note: </strong> The includes() method is case sensitive.",
           "example": "let result = str.includes('dog');<br>console.log(result);",
           "output": "true"
+        },
+        {
+          "name": "startsWith",
+          "shortDesc": "check if string starts with",
+          "desc": "This method determines whether a string begins with the characters of a specified string.<br>This method returns true if the string begins with the characters, and false if not.<br><strong > Note: </strong> The startsWith() method is case sensitive.",
+          "example": "let result = str.startsWith('dog');<br>console.log(result);let result2 = str.startsWith('The');<br>console.log(result2);",
+          "output": "false <span class='comment'>// result</span><br>true <span class='comment'>// result2</span>"
+        },
+        {
+          "name": "endsWith",
+          "shortDesc": "check if string ends with",
+          "desc": "This method determines whether a string ends with the characters of a specified string.<br>This method returns true if the string ends with the characters, and false if not.<br><strong > Note: </strong> The endsWith() method is case sensitive.",
+          "example": "let result = str.endsWith('lazy?');<br>console.log(result);let result2 = str.endsWith('The quick brown fox');<br>console.log(result2);",
+          "output": "true <span class='comment'>// result</span><br>false <span class='comment'>// result2</span>"
         }
       ]
     },
@@ -143,6 +157,24 @@
         "desc": "This method is used to split a string into an array of substrings, and returns the new array.<br><strong > Note: </strong> The includes() method is case sensitive.",
         "example": "let result = str.split(' ');<br>console.log(result);",
         "output": "['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.', 'If', 'the', 'dog', 'reacted,', 'was', 'it', 'really', 'lazy?']"
+      }, {
+        "name": "trim",
+        "shortDesc": "trim whitespace from ends",
+        "desc": "This method is used to removes whitespace from both sides of a string.",
+        "example": "let result = str.trim();<br>console.log(result);",
+        "output": "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?"
+      }, {
+        "name": "charAt",
+        "shortDesc": "get character at a index",
+        "desc": "This method returns the character at the specified index in a string.",
+        "example": "let result = str.charAt(4);<br>console.log(result);",
+        "output": "q <span class='comment'>// index starts from 0</span>"
+      }, {
+        "name": "charCodeAt",
+        "shortDesc": "get Unicode of character",
+        "desc": "This method returns the Unicode of the character at the specified index in a string.",
+        "example": "let result = str.charCodeAt(4);<br>console.log(result);",
+        "output": "113"
       }]
     }
   }
