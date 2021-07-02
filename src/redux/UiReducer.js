@@ -7,7 +7,7 @@ const initialState = {
   tabs: [
     { name: "Strings", value: 0 },
     { name: "Arrays", value: 1 },
-    // { name: "Objects", value: 2 },
+    { name: "Objects", value: 2 },
   ],
   colors: { pink: "#FEB3B3", green: "#B0EA68" },
 }

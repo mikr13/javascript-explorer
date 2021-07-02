@@ -1,85 +1,182 @@
 {
-  "baseUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/",
-  "dropdownLabel": "I have an String, I would like to: ",
-  "defaultCode": "let str = \"The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?\";",
+  "baseUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/",
+  "dropdownLabel": "I have an object, I would like to: ",
+  "defaultCode": "<span>let obj = {<br><span>&nbsp;&nbsp;</span>a: 1,<br><span>&nbsp;&nbsp;</span>b: 2,<br><span>&nbsp;&nbsp;</span>c: 3<br>};</span>",
   "options": {
-    "extract a part of string": {
-      "dropdownLabel": "Parameters can have:",
+    "create an object": {
+      "dropdownLabel": "I need to:",
       "options": [{
-          "name": "slice",
-          "shortDesc": "positive or negative indexes",
-          "desc": "Extracts a part of a string and returns the extracted part in a new string. This can accept negative index.",
-          "example": "let result = str.slice(-84, -65);<br>console.log(result);",
-          "output": "The quick brown fox"
+          "name": "create",
+          "shortDesc": "create a new object",
+          "desc": "Creates a new object with the specified prototype object and properties.<br><br><strong>Important note for beginners!</strong> It's more common to create an object the way that it's shown at the top of the example, like this <code>let obj = { a: 1 };</code>",
+          "example": "const obj2 = Object.create(obj);<br>console.log(obj2);",
+          "output": "Object {<br><span>&nbsp;&nbsp;</span>a: 1,<br><span>&nbsp;&nbsp;</span>b: 2,<br><span>&nbsp;&nbsp;</span>c: 3<br>}"
         },
         {
-          "name": "substring",
-          "shortDesc": "positive indexes only",
-          "desc": "Extracts a part of a string and returns the extracted part in a new string. This cannot accept negative index.",
-          "example": "let result = str.substring(0, 19);<br>console.log(result);",
-          "output": "The quick brown fox"
-        },
-        {
-          "name": "substr",
-          "shortDesc": "starting index & length of part to extract",
-          "desc": "Extracts a part of a string and returns the extracted part in a new string. The second parameter specifies the length of the extracted part.",
-          "example": "let result = str.substr(0, 19);<br>console.log(result);",
-          "output": "The quick brown fox"
+          "name": "assign",
+          "shortDesc": "make a copy of an object",
+          "desc": "Copies the values of all enumerable own properties from one or more source objects to a target object. It will return the target object. Though not technically a built in object method, it's more common when using ES6 to make use of the <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator\" target=\"_blank\">Spread Operator</a>, by using <code>...</code>",
+          "example": "const copy = Object.assign({}, obj);<br>console.log(copy);",
+          "output": "Object {<br><span>&nbsp;&nbsp;</span>a: 1,<br><span>&nbsp;&nbsp;</span>b: 2,<br><span>&nbsp;&nbsp;</span>c: 3<br>}"
         }
       ]
     },
-    "replace a part of string": {
-      "dropdownLabel": "I need to:",
+    "create properties": {
+      "dropdownLabel": "I need to create:",
       "options": [{
-          "name": "replace",
-          "shortDesc": "replace once with string",
-          "desc": "Returns a new string with first occurrence of a string replaced by a replacement.",
-          "example": "let result = str.replace('dog', 'monkey');<br>console.log(result);",
-          "output": "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+          "name": "defineProperty",
+          "shortDesc": "a new property or modify an existing one",
+          "desc": "Adds the named property described by a given descriptor to an object.<br><br><strong>Important note for beginners!</strong> It's more common to use dot or square bracket notation to create a new property or modify an existing one. Like this: <code>obj.a = 1</code> or <code>obj[a] = 1</code>. This isn't technically a built-in method, that's why it's not included.",
+          "example": "Object.defineProperty(obj, 'd', {<br><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span>writable: true,<br><span>&nbsp;&nbsp;</span>value: 4<br>});<br><br>console.log(obj.d);",
+          "output": "4"
         },
         {
-          "name": "replace",
-          "shortDesc": "replace once or all with regular expression",
-          "desc": "Returns a new string with some or all matches of a pattern replaced by a replacement. Here pattern is a RegExp",
-          "example": "let result = str.replace(/dog/gi, 'monkey'); <span class='comment'>// g means global (replace all) & i means case insensitive</span> <br>console.log(result);",
-          "output": "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
-        },
-        {
-          "name": "replaceAll",
-          "shortDesc": "replace all always with or without regular expression",
-          "desc": "Returns a new string with all matches of a pattern replaced by a replacement.",
-          "example": "let result = str.replaceAll('dog', 'monkey');<br>console.log(result);",
-          "output": "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
+          "name": "defineProperties",
+          "shortDesc": "one or more properties or modify existing properties",
+          "desc": "Adds one or more properties described by a given descriptor to an object.<br><br><strong>Important note for beginners!</strong> It's more common to use dot or square bracket notation to create a new property or modify an existing one. Like this: <code>obj.a = 1</code> or <code>obj[a] = 1</code>. This isn't technically a built-in method, that's why it's not included.",
+          "example": "Object.defineProperties(obj, {<br><span>&nbsp;&nbsp;</span>d: {<br><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>value: 4,<br><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>},<br><span>&nbsp;&nbsp;</span>e: {<br><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>value: 5,<br><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>}<br>});<br><br>console.log(obj);",
+          "output": "{a: 1, b: 2, c: 3, d: 4, e: 5}"
         }
       ]
     },
-    "change string case": {
-      "dropdownLabel": "I need to:",
+    "get information about an object": {
+      "dropdownLabel": "I need to determine:",
       "options": [{
-          "name": "toLowerCase",
-          "shortDesc": "make it lowercase",
-          "desc": "Converts the string to lowercase",
-          "example": "let result = str.toLowerCase();<br>console.log(result)",
-          "output": "the quick brown fox jumps over the lazy monkey. if the monkey reacted, was it really lazy?"
+          "name": "isExtensible",
+          "shortDesc": "if more properties can be added",
+          "desc": "Determines if extending of an object is allowed.",
+          "example": "console.log(Object.isExtensible(obj));<br>Object.freeze(obj);<br>console.log(Object.isExtensible(obj));",
+          "output": "true<br>false"
         },
         {
-          "name": "toUpperCase",
-          "shortDesc": "make it uppercase",
-          "desc": "Converts the string to uppercase",
-          "example": "let result = str.toUpperCase();<br>console.log(result);",
-          "output": "THE QUICK BROWN FOX JUMPS OVER THE LAZY MONKEY. IF THE MONKEY REACTED, WAS IT REALLY LAZY?"
+          "name": "is",
+          "shortDesc": "if two references point to the same object",
+          "desc": "Compares if two references point to the same object. Equates all NaN values (which differs from both Abstract Equality Comparison and Strict Equality Comparison). This one is a little weird, and the MDN docs are a bit misleading. It's <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#When_to_use_Object.is_versus_triple_equals\" target=\"_blank\">more useful to use triple equals <code>===</code></a> to check equality",
+          "example": "let obj2 = {<br><span>&nbsp;&nbsp;</span>a: 1,<br><span>&nbsp;&nbsp;</span>b: 2,<br><span>&nbsp;&nbsp;</span>c: 3<br>};<br><br>console.log(Object.is(obj, obj2));<br>console.log(Object.is(obj, obj));",
+          "output": "false<br>true"
+        },
+        {
+          "name": "isFrozen",
+          "shortDesc": "if an object and its properties can't be modified",
+          "desc": "Determines if an object is frozen",
+          "example": "console.log(Object.isFrozen(obj));<br>Object.freeze(obj);<br>console.log(Object.isFrozen(obj));",
+          "output": "false<br>true"
+        },
+        {
+          "name": "isSealed",
+          "shortDesc": "if an object can't be modified (its properties can be, though)",
+          "desc": "Determines if the descriptor of its properties can't be changed and new properties can't be created.",
+          "example": "Object.seal(obj);<br><br>console.log(Object.isSealed(obj));",
+          "output": "true"
         }
       ]
     },
-    "something else": {
+    "get information about property details": {
+      "dropdownLabel": "I need to find out:",
+      "options": [{
+          "name": "getOwnPropertyDescriptor",
+          "shortDesc": "details about a property",
+          "desc": "Returns a property descriptor for a named property on an object",
+          "example": "const o = Object.getOwnPropertyDescriptor(obj, 'a');<br><br>console.log(o);",
+          "output": "Object {<br><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span>value: 1,<br><span>&nbsp;&nbsp;</span>writable: true<br>}"
+        },
+        {
+          "name": "getOwnPropertyDescriptors",
+          "shortDesc": "details about all the properties on an object",
+          "desc": "Returns an object containing all own property descriptors for an object",
+          "example": "console.log(Object.getOwnPropertyDescriptors(obj))",
+          "output": "Object {<br><span>&nbsp;&nbsp;</span>a: Object {<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>value: 1,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>},<br><span>&nbsp;&nbsp;</span>b: Object {<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>value: 2,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>},<br><span>&nbsp;&nbsp;</span>c: Object {<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>value: 3,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>},<br>}"
+        },
+        {
+          "name": "propertyIsEnumerable",
+          "shortDesc": "if a property can be traversed with a for...in loop",
+          "desc": "Returns a boolean indicating if the internal ECMAScript [[Enumerable]] attribute is set. This can be used to see if something is a built-in or user-defined method because built-in properties tend to not be enumerable",
+          "example": "console.log(obj.propertyIsEnumerable('a'));<br>console.log(Math.propertyIsEnumerable('random'));",
+          "output": "true<br>false"
+        },
+        {
+          "name": "hasOwnProperty",
+          "shortDesc": "if a property exists as a direct property of the object",
+          "desc": "Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain",
+          "example": "console.log(obj.hasOwnProperty('a'));<br>delete obj.a;<br>console.log(obj.hasOwnProperty('a'));",
+          "output": "true<br>false"
+        }
+      ]
+    },
+    "get list of property details like keys and/or values": {
+      "dropdownLabel": "I need to get an array of all of the:",
+      "options": [{
+          "name": "getOwnPropertyDescriptor",
+          "shortDesc": "details about a property",
+          "desc": "Returns a property descriptor for a named property on an object",
+          "example": "const o = Object.getOwnPropertyDescriptor(obj, 'a');<br><br>console.log(o);",
+          "output": "Object {<br><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span>value: 1,<br><span>&nbsp;&nbsp;</span>writable: true<br>}"
+        },
+        {
+          "name": "getOwnPropertyDescriptors",
+          "shortDesc": "details about all the properties on an object",
+          "desc": "Returns an object containing all own property descriptors for an object",
+          "example": "console.log(Object.getOwnPropertyDescriptors(obj))",
+          "output": "Object {<br><span>&nbsp;&nbsp;</span>a: Object {<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>value: 1,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>},<br><span>&nbsp;&nbsp;</span>b: Object {<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>value: 2,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>},<br><span>&nbsp;&nbsp;</span>c: Object {<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>configurable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>enumerable: true,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>value: 3,<br><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span>writable: true<br><span>&nbsp;&nbsp;</span>},<br>}"
+        },
+        {
+          "name": "propertyIsEnumerable",
+          "shortDesc": "if a property can be traversed with a for...in loop",
+          "desc": "Returns a boolean indicating if the internal ECMAScript [[Enumerable]] attribute is set. This can be used to see if something is a built-in or user-defined method because built-in properties tend to not be enumerable",
+          "example": "console.log(obj.propertyIsEnumerable('a'));<br>console.log(Math.propertyIsEnumerable('random'));",
+          "output": "true<br>false"
+        },
+        {
+          "name": "hasOwnProperty",
+          "shortDesc": "if a property exists as a direct property of the object",
+          "desc": "Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain",
+          "example": "console.log(obj.hasOwnProperty('a'));<br> delete obj.a;<br>console.log(obj.hasOwnProperty('a'));",
+          "output": "true<br>false"
+        }
+      ]
+    },
+    "restrict changes to an object": {
       "dropdownLabel": "I need to:",
       "options": [{
-        "name": "length",
-        "shortDesc": "find the length of the string",
-        "desc": "Returns the number of elements in that string.",
-        "example": "console.log(str.length);",
-        "output": "90"
-      }]
+          "name": "seal",
+          "shortDesc": "make sure properties can't be added or deleted",
+          "desc": "Prevents other code from deleting properties of an object. Existing properties can still be modified",
+          "example": "Object.seal(obj);<br>delete obj.c;<br><br>console.log(obj);",
+          "output": "{a: 1, b: 2, c: 3} // obj.c doesn't get deleted"
+        },
+        {
+          "name": "freeze",
+          "shortDesc": "make sure properties can't be added, deleted, or modified",
+          "desc": "Freezes an object: other code can't delete or change any properties.",
+          "example": "Object.freeze(obj);<br>obj.a = 10;<br><br>console.log(obj.a);",
+          "output": "1 <span class='comment'>//the value didn't update to 10</span>"
+        },
+        {
+          "name": "preventExtensions",
+          "shortDesc": "make sure properties can't be added.",
+          "desc": "Prevents any extensions of an object. I can still delete properties but can't add any new ones.",
+          "example": "Object.preventExtensions(obj);<br>obj.d = 4;<br><br>console.log(obj.d);",
+          "output": "undefined"
+        }
+      ]
+    },
+    "create string from an object": {
+      "dropdownLabel": "I need to return a:",
+      "options": [{
+          "name": "toString",
+          "shortDesc": "string representation of the object.",
+          "desc": "The <code>toString()</code> method returns a string representing the object. Though this is the built-in method available, it's usually more useful to use <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\" target=\"_blank\"><code>JSON.stringify()</code></a>",
+          "example": "console.log(obj.toString());<br>console.log(obj.a.toString());",
+          "output": "\"[object Object]\"<br>\"1\""
+        },
+        {
+          "name": "toLocaleString",
+          "shortDesc": "localized string representation of the object.",
+          "desc": "The <code>toLocaleString()</code> method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes. In human terms: this means if you have something that has different data based on location, such as date methods, it will give you a different time format",
+          "example": "obj.d = new Date();<br><br>console.log(obj.d);<br>console.log(obj.d.toLocaleString());",
+          "output": "Fri Dec 29 2017 20:57:35 GMT-0700 (MST)<br>12/29/2017, 8:57:35 PM"
+        }
+      ]
     }
   }
 }
