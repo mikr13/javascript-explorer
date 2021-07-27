@@ -1,7 +1,7 @@
 # Welcome to javascript-explorer 👋
 
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/MiKr13/javascript-explorer)
-[![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://github.com/MiKr13/javascript-explorer/LICENSE.md)
+[![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://github.com/MiKr13/javascript-explorer/blob/main/LICENSE.md)
 
 > ⭐ A resource to help developers figure out what JavaScript methods would be best to use at any given time
 
