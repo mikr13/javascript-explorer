@@ -9,7 +9,7 @@
 
 ## 📃 [Post](https://www.linkedin.com/posts/mikr13_javascript-developers-datastructures-activity-6825635521071517696-UmTq)
 
-![javascript explorer video link](.github\assets\javascript-explorer-final.mp4)
+![javascript explorer video link](https://github.com/MiKr13/javascript-explorer/blob/main/.github/assets/javascript-explorer-final.mp4)
 
 ## 🎯 Goal
 
