@@ -7,6 +7,8 @@
 
 ## 🏠 [Homepage](https://mikr13.github.io/javascript-explorer/)
 
+## 📃 [Post](https://www.linkedin.com/posts/mikr13_javascript-developers-datastructures-activity-6825635521071517696-UmTq)
+
 ## Install
 
 ```sh
