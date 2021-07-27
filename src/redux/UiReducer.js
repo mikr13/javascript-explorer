@@ -28,7 +28,3 @@ export default (state = initialState, action) => {
     }
   }
 }
-
-export const changeDarkMode = () => async (dispatch) => {
-  dispatch({ type: TOGGLE_DARK_MODE })
-}
