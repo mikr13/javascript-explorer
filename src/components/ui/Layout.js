@@ -7,6 +7,7 @@ import Slider from "./Slider"
 import TabList from "./TabList"
 import { useTheme } from "@material-ui/core/styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
+import ui from '../../assets/json/ui.json'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +25,7 @@ const Layout = () => {
   return (
     <Container maxWidth="lg">
       <Typography variant="h1" className={matches ? "responsive-h1" : ""}>
-        <span>{matches ? "JS" : "JavaScript"}</span> Explorer
+        <span>{matches ? ui.shortTitle : ui.title}</span> Explorer
       </Typography>
       <Grid container my={4} className={classes.root}>
         <Slider />

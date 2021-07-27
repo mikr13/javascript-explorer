@@ -1,0 +1,18 @@
+{
+  "title": "JavaScript",
+  "shortTitle": "JS",
+  "tabs": [
+    {
+      "name": "String",
+      "value": 0
+    },
+    {
+      "name": "Array",
+      "value": 1
+    },
+    {
+      "name": "Object",
+      "value": 2
+    }
+  ]
+}

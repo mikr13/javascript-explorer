@@ -7,6 +7,7 @@ import Tab from "@material-ui/core/Tab"
 import { TOGGLE_TAB_INDEX } from "../../redux/UiReducer"
 import { useTheme } from "@material-ui/core/styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
+import { tabs } from '../../assets/json/ui.json'
 
 const a11yProps = (index) => ({
   id: `vertical-tab-${index}`,
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 const TabsList = () => {
   const classes = useStyles()
-  const { tabIndex, tabs } = useSelector((state) => state.ui)
+  const { tabIndex } = useSelector((state) => state.ui)
   const dispatch = useDispatch()
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("md"))
