@@ -9,6 +9,18 @@
 
 ## 📃 [Post](https://www.linkedin.com/posts/mikr13_javascript-developers-datastructures-activity-6825635521071517696-UmTq)
 
+![javascript explorer video link](.github\assets\javascript-explorer-final.mp4)
+
+## 🎯 Goal
+
+The goal is to find the relevant method without having to dig the docs 📃 with simple sentences ✍.
+
+For example:
+
+* You're thinking 🤔: "I have a String & I want to search in it", you can find it there. 🤩
+
+* Or let's say you're thinking 💭: "I have an array & I would like to find one or more items in it", well the best answer can be easily searched for by using 2 levels of dropdowns that you can type in or select from. 🔥
+
 ## Install
 
 ```sh
@@ -21,13 +33,24 @@ yarn install
 yarn serve
 ```
 
+## New Language contribution
+
+The code is modular enough to be used with other Languages (python, java, c#, etc.) without many changes.
+
+To add new a language:
+
+1. Update the `ui.json` file in `src/assets/json` folder;
+
+2. Add corresponding json files for the methods in same folder.
+
+That's it!
+
 ## Creator
 
 👤 **mihir kumar**
 
 * Linkedin: [@mikr13](https://linkedin.com/in/mikr13)
 * Github: [@mikr13](https://github.com/mikr13)
-
 
 ## 🤝 Contributing
 
@@ -38,7 +61,6 @@ Feel free to check [issues page](https://github.com/MiKr13/javascript-explorer/i
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
 
 ## 📝 License
 
