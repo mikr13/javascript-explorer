@@ -6,176 +6,187 @@
   "options": {
     "extract a part of it": {
       "dropdownLabel": "Parameters can have:",
-      "options": [{
+      "options": [
+        {
           "name": "slice",
           "shortDesc": "positive or negative indexes",
           "desc": "Extracts a part of a string and returns the extracted part in a new string.<br>This can accept negative index.",
-          "example": "let result = str.slice(-84, -65);<br>console.log(result);",
+          "example": "let result = str.slice(-84, -65);\nconsole.log(result);",
           "output": "The quick brown fox"
         },
         {
           "name": "substring",
           "shortDesc": "positive indexes only",
           "desc": "Extracts a part of a string and returns the extracted part in a new string.<br>This cannot accept negative index.",
-          "example": "let result = str.substring(0, 19);<br>console.log(result);",
+          "example": "let result = str.substring(0, 19);\nconsole.log(result);",
           "output": "The quick brown fox"
         },
         {
           "name": "substr",
           "shortDesc": "starting index & length of part to extract",
           "desc": "Extracts a part of a string and returns the extracted part in a new string.<br>The second parameter specifies the length of the extracted part.",
-          "example": "let result = str.substr(0, 19);<br>console.log(result);",
+          "example": "let result = str.substr(0, 19);\nconsole.log(result);",
           "output": "The quick brown fox"
         }
       ]
     },
     "replace a part of it": {
       "dropdownLabel": "I need to:",
-      "options": [{
+      "options": [
+        {
           "name": "replace",
           "shortDesc": "replace once with string",
           "desc": "Returns a new string with first occurrence of a string replaced by a replacement.",
-          "example": "let result = str.replace('dog', 'monkey');<br>console.log(result);",
+          "example": "let result = str.replace('dog', 'monkey');\nconsole.log(result);",
           "output": "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
         },
         {
           "name": "replace",
           "shortDesc": "replace once or all with regular expression",
           "desc": "Returns a new string with some or all matches of a pattern replaced by a replacement.<br>Here pattern is a RegExp",
-          "example": "let result = str.replace(/dog/gi, 'monkey'); <span class='comment'>// g means global (replace all) & i means case insensitive</span> <br>console.log(result);",
+          "example": "let result = str.replace(/dog/gi, 'monkey'); // g means global (replace all) & i means case insensitive\nconsole.log(result);",
           "output": "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
         },
         {
           "name": "replaceAll",
           "shortDesc": "replace all always with or without regular expression",
           "desc": "Returns a new string with all matches of a pattern replaced by a replacement.",
-          "example": "let result = str.replaceAll('dog', 'monkey');<br>console.log(result);",
+          "example": "let result = str.replaceAll('dog', 'monkey');\nconsole.log(result);",
           "output": "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
         }
       ]
     },
     "change it's case": {
       "dropdownLabel": "I need to:",
-      "options": [{
+      "options": [
+        {
           "name": "toLowerCase",
           "shortDesc": "make it lowercase",
           "desc": "Converts the string to lowercase",
-          "example": "let result = str.toLowerCase();<br>console.log(result)",
+          "example": "let result = str.toLowerCase();\nconsole.log(result)",
           "output": "the quick brown fox jumps over the lazy monkey. if the monkey reacted, was it really lazy?"
         },
         {
           "name": "toUpperCase",
           "shortDesc": "make it uppercase",
           "desc": "Converts the string to uppercase",
-          "example": "let result = str.toUpperCase();<br>console.log(result);",
+          "example": "let result = str.toUpperCase();\nconsole.log(result);",
           "output": "THE QUICK BROWN FOX JUMPS OVER THE LAZY MONKEY. IF THE MONKEY REACTED, WAS IT REALLY LAZY?"
         }
       ]
     },
     "join, concatenate or repeat": {
       "dropdownLabel": "I need to:",
-      "options": [{
+      "options": [
+        {
           "name": "concat",
           "shortDesc": "join two new string",
           "desc": "This method is used to join two or more strings.",
-          "example": "let result = str.concat(' I don/'t know');<br>console.log(result) <span class='comment'>// same thing can be achieved by let result = `${str} I don/'t know`</span>",
+          "example": "let result = str.concat(' I don/'t know');\nconsole.log(result) // same thing can be achieved by let result = `${str} I don/'t know`",
           "output": "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy? I don't know"
         },
         {
           "name": "repeat",
           "shortDesc": "repeat a string",
           "desc": "This method returns a new string with a specified number of copies of the string it was called on.",
-          "example": "let result = str.repeat();<br>console.log(result);",
+          "example": "let result = str.repeat();\nconsole.log(result);",
           "output": "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
         }
       ]
     },
     "search or match in it": {
       "dropdownLabel": "I need to:",
-      "options": [{
+      "options": [
+        {
           "name": "search",
           "shortDesc": "search in a string",
           "desc": "This method searches a string for a specified value, and returns the position of the match. The search value can be string or a regular expression.<br>This method returns - 1 if no match is found.",
-          "example": "let result = str.search('brown fox');<br>console.log(result)",
+          "example": "let result = str.search('brown fox');\nconsole.log(result)",
           "output": "10"
         },
         {
           "name": "match",
           "shortDesc": "match all occurrence (using RegExp)",
           "desc": "This method searches a string for a match against a regular expression, and returns the matches, as an Array object.",
-          "example": "let result = str.match(/dog/gi);<br>console.log(result);",
+          "example": "let result = str.match(/dog/gi);\nconsole.log(result);",
           "output": "['dog', 'dog']"
         },
         {
           "name": "indexOf",
           "shortDesc": "get index of the occurrence",
           "desc": "This method returns the position of the first occurrence of a specified value in a string.<br>This method returns -1 if the value to search for never occurs.<br><strong > Note: </strong> The indexOf() method is case sensitive.",
-          "example": "let result = str.indexOf('dog');<br>console.log(result);",
+          "example": "let result = str.indexOf('dog');\nconsole.log(result);",
           "output": "40"
         },
         {
           "name": "lastIndexOf",
           "shortDesc": "get index of the last occurrence",
           "desc": "This method returns the position of the last occurrence of a specified value in a string.<br><strong > Note: </strong> The string is searched from the end to the beginning, but returns the index starting at the beginning, at position 0.<br>This method returns -1 if the value to search for never occurs.<br><strong > Note: </strong> The lastIndexOf() method is case sensitive!",
-          "example": "let result = str.lastIndexOf('dog');<br>console.log(result);",
+          "example": "let result = str.lastIndexOf('dog');\nconsole.log(result);",
           "output": "52"
         },
         {
           "name": "includes",
           "shortDesc": "check if character or string exists",
           "desc": "This method determines whether a string contains the characters of a specified string.<br>This method returns true if the string contains the characters, and false if not.<br><strong > Note: </strong> The includes() method is case sensitive.",
-          "example": "let result = str.includes('dog');<br>console.log(result);",
+          "example": "let result = str.includes('dog');\nconsole.log(result);",
           "output": "true"
         },
         {
           "name": "startsWith",
           "shortDesc": "check if string starts with",
           "desc": "This method determines whether a string begins with the characters of a specified string.<br>This method returns true if the string begins with the characters, and false if not.<br><strong > Note: </strong> The startsWith() method is case sensitive.",
-          "example": "let result = str.startsWith('dog');<br>console.log(result);let result2 = str.startsWith('The');<br>console.log(result2);",
-          "output": "false <span class='comment'>// result</span><br>true <span class='comment'>// result2</span>"
+          "example": "let result = str.startsWith('dog');\nconsole.log(result);let result2 = str.startsWith('The');\nconsole.log(result2);",
+          "output": "false // result\ntrue // result2"
         },
         {
           "name": "endsWith",
           "shortDesc": "check if string ends with",
           "desc": "This method determines whether a string ends with the characters of a specified string.<br>This method returns true if the string ends with the characters, and false if not.<br><strong > Note: </strong> The endsWith() method is case sensitive.",
-          "example": "let result = str.endsWith('lazy?');<br>console.log(result);let result2 = str.endsWith('The quick brown fox');<br>console.log(result2);",
-          "output": "true <span class='comment'>// result</span><br>false <span class='comment'>// result2</span>"
+          "example": "let result = str.endsWith('lazy?');\nconsole.log(result);let result2 = str.endsWith('The quick brown fox');\nconsole.log(result2);",
+          "output": "true // result\nfalse // result2"
         }
       ]
     },
     "something else": {
       "dropdownLabel": "I need to:",
-      "options": [{
-        "name": "length",
-        "shortDesc": "find the length of the string",
-        "desc": "Returns the number of elements in that string.",
-        "example": "console.log(str.length);",
-        "output": "90"
-      }, {
-        "name": "split",
-        "shortDesc": "convert string to array",
-        "desc": "This method is used to split a string into an array of substrings, and returns the new array.<br><strong > Note: </strong> The includes() method is case sensitive.",
-        "example": "let result = str.split(' ');<br>console.log(result);",
-        "output": "['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.', 'If', 'the', 'dog', 'reacted,', 'was', 'it', 'really', 'lazy?']"
-      }, {
-        "name": "trim",
-        "shortDesc": "trim whitespace from ends",
-        "desc": "This method is used to removes whitespace from both sides of a string.",
-        "example": "let result = str.trim();<br>console.log(result);",
-        "output": "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?"
-      }, {
-        "name": "charAt",
-        "shortDesc": "get character at a index",
-        "desc": "This method returns the character at the specified index in a string.",
-        "example": "let result = str.charAt(4);<br>console.log(result);",
-        "output": "q <span class='comment'>// index starts from 0</span>"
-      }, {
-        "name": "charCodeAt",
-        "shortDesc": "get Unicode of character",
-        "desc": "This method returns the Unicode of the character at the specified index in a string.",
-        "example": "let result = str.charCodeAt(4);<br>console.log(result);",
-        "output": "113"
-      }]
+      "options": [
+        {
+          "name": "length",
+          "shortDesc": "find the length of the string",
+          "desc": "Returns the number of elements in that string.",
+          "example": "console.log(str.length);",
+          "output": "90"
+        },
+        {
+          "name": "split",
+          "shortDesc": "convert string to array",
+          "desc": "This method is used to split a string into an array of substrings, and returns the new array.<br><strong > Note: </strong> The includes() method is case sensitive.",
+          "example": "let result = str.split(' ');\nconsole.log(result);",
+          "output": "['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog.', 'If', 'the', 'dog', 'reacted,', 'was', 'it', 'really', 'lazy?']"
+        },
+        {
+          "name": "trim",
+          "shortDesc": "trim whitespace from ends",
+          "desc": "This method is used to removes whitespace from both sides of a string.",
+          "example": "let result = str.trim();\nconsole.log(result);",
+          "output": "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?"
+        },
+        {
+          "name": "charAt",
+          "shortDesc": "get character at a index",
+          "desc": "This method returns the character at the specified index in a string.",
+          "example": "let result = str.charAt(4);\nconsole.log(result);",
+          "output": "q // index starts from 0"
+        },
+        {
+          "name": "charCodeAt",
+          "shortDesc": "get Unicode of character",
+          "desc": "This method returns the Unicode of the character at the specified index in a string.",
+          "example": "let result = str.charCodeAt(4);\nconsole.log(result);",
+          "output": "113"
+        }
+      ]
     }
   }
 }
