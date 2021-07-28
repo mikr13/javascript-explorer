@@ -43,9 +43,11 @@ const CodeDetailsCard = React.memo(({ main, data, url, defaultCode }) => {
           <CodeCard data={data} defaultCode={defaultCode} />
         </CardContent>
         <CardActions>
-          <Link variant="h5" href={url} target="_blank" rel="noreferrer">
-            See the docs <LaunchIcon />
-          </Link>
+          {url && url.length && (
+            <Link variant="h5" href={url} target="_blank" rel="noreferrer">
+              See the docs <LaunchIcon />
+            </Link>
+          )}
         </CardActions>
       </Card>
     </Grid>

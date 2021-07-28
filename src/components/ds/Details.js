@@ -76,7 +76,7 @@ const Details = ({ label }) => {
       {valueSubLevel && Object.keys(valueSubLevel).length && (
         <DetailsCard
           main={label}
-          url={`${data.baseUrl}${valueSubLevel.name}`}
+          url={data.baseUrl ? `${data.baseUrl}${valueSubLevel.name}` : ""}
           data={valueSubLevel}
           defaultCode={data.defaultCode}
         />
