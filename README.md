@@ -35,7 +35,7 @@ yarn install
 yarn serve
 ```
 
-## New Language contribution
+## New Language contributions
 
 The code is modular enough to be used with other Languages (python, java, c#, etc.) without many changes.
 
